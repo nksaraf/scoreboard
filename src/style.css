@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  width: 100%;
+  font-family: "Roboto Slab";
+}
+
+::-webkit-scrollbar {
+	display: none;
+  width: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+  padding: .5em;
+  border: 2px solid #1976D2;
+  width: 120px;
+  font-size: 1em;
+  font-family: "Roboto Slab";
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  background-color: #1976D2;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
