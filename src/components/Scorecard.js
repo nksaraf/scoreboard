@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, withStyles, Collapse } from '@material-ui/core';
+import { Paper, withStyles, Collapse, AppBar, Tabs, Tab } from '@material-ui/core';
 import classnames from 'classnames';
 import Flexbox from 'flexbox-react';
 import { TeamBox } from './TeamBox';
@@ -59,6 +59,18 @@ class Scorecard extends React.Component {
 					<p onClick={this.handleExpandClick} className={classes.detail}>{game.status.info.description}</p>
 					<Collapse in={this.state.boxscore_view} timeout="auto" unmountOnExit>
 						<Flexbox className={classes.boxscoreWrapper}>
+						<AppBar position="static" color="default">
+				          <Tabs
+				            value={this.state.value}
+				            onChange={this.handleChange}
+				            indicatorColor="primary"
+				            textColor="primary"
+				            fullWidth
+				          >
+				            <Tab label={game.teams.home.shortName} />
+				            <Tab label={game.teams.away.shortName} />
+				          </Tabs>
+				        </AppBar>
 							<Boxscore boxscore={boxscore.home} headers={boxscore.header} />
 						</Flexbox>
 					</Collapse>
