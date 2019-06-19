@@ -1,7 +1,7 @@
 import React from 'react';
 import Scorecard from './Scorecard';
 import { connect } from 'react-redux';
-import { fetchScoreboard } from '../redux/actions';
+import { fetchScoreboard, readTodotxt } from '../redux/actions';
 import { Button, withStyles } from '@material-ui/core';
 import Flexbox from 'flexbox-react';
 import { RefreshRounded } from '@material-ui/icons';
@@ -64,7 +64,9 @@ class Main extends React.Component {
   }
 
   componentDidMount() {  
+    console.log('Hello');
     this.props.fetchScoreboard(this.state.scoreboardDay);
+    this.props.readTodotxt('~/todo.txt');
     // let timer = setInterval(() => this.props.fetchScoreboard(this.state.scoreboardDay), 30000);
     // this.setState({timer});
 	}
@@ -104,5 +106,5 @@ class Main extends React.Component {
 
 export default connect(
 	(state) => { return state }, 
-	{ fetchScoreboard })
+	{ fetchScoreboard, readTodotxt })
 (withStyles(styles)(Main))

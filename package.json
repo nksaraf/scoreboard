@@ -50,11 +50,13 @@
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
+    "circular-std": "^1.0.0",
     "electron-compile": "^6.4.3",
     "electron-devtools-installer": "^2.2.4",
     "electron-reload": "^1.3.0",
     "electron-squirrel-startup": "^1.0.0",
     "flexbox-react": "^4.4.0",
+    "jstodotxt": "^0.7.0",
     "moment": "^2.22.2",
     "react": "^16.6.1",
     "react-date-picker": "^7.0.0",
@@ -64,7 +66,8 @@
     "react-redux": "^5.1.1",
     "react-spinners": "^0.4.7",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "todotxt-parser": "^1.0.2"
   },
   "devDependencies": {
     "babel-plugin-css-modules-transform": "^1.6.1",
@@ -72,7 +75,7 @@
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "electron-forge": "^5.2.2",
+    "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "3.0.6",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",

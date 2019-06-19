@@ -18,7 +18,7 @@ if (isDevMode) {
 
 const createTray = () => {
   tray = new Tray(path.join(__dirname, 'jumpman.png'));
-  tray.setHighlightMode('never');
+  // tray.setHighlightMode('never');
 
   tray.on('right-click', toggleWindow);
   tray.on('double-click', toggleWindow);

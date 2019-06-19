@@ -1,15 +1,26 @@
 import axios from 'axios';
 import moment from 'moment';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+import { TodoTxt, TodoTxtItem } from 'jstodotxt';
 
 // const API = "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard";
 const API = "http://localhost:5000/scoreboard";
 
 export const types = {
-	FETCH_SCOREBOARD_BEGIN: 'FETCH_SCOREBOARD_BEGIN',
-	FETCH_SCOREBOARD_SUCCESS: 'FETCH_SCOREBOARD_SUCCESS',
-	FETCH_SCOREBOARD_FAILURE: 'FETCH_SCOREBOARD_FAILURE'
+	READ_TODOTXT: 'READ_TODOTXT'
 }
 //const ENDPOINT = "scoreboard";
+
+export const readTodotxt = (todotxt_path) => {
+	let todotxt = fs.readFileSync(path.join(os.homedir(), todotxt_path)).toString();
+	let todos = TodoTxt.parse(todotxt);
+	return {
+		type: types.READ_TODOTXT,
+		payload: { todos }
+	}
+}
 
 export const fetchScoreboard = (date) => {
 	console.log(date);
