@@ -57,7 +57,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "flexbox-react": "^4.4.0",
     "jstodotxt": "^0.7.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "react": "^16.6.1",
     "react-date-picker": "^7.0.0",
     "react-day-picker": "^7.2.4",
